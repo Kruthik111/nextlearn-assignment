@@ -31,7 +31,7 @@ const ViewUser = () => {
   return (
     <div>
       <h2>User List</h2>
-      <ul>
+      <Box>
         {users.map((user, index) => (
           <li key={index}>
             <Paper>
@@ -44,7 +44,7 @@ const ViewUser = () => {
             </Paper>
           </li>
         ))}
-      </ul>
+      </Box>
     </div>
   );
 };

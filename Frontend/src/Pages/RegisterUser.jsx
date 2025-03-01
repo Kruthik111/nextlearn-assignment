@@ -1,4 +1,4 @@
-import { Button, Paper, TextField } from "@mui/material";
+import { Button, Paper, TextField, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
@@ -7,7 +7,7 @@ const RegisterUser = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: 0,
+    phone: null,
     city: "",
   });
 
@@ -53,6 +53,7 @@ const RegisterUser = () => {
           gap={2}
         >
           <form method="POST">
+            <Typography>Name</Typography>
             <TextField
               type="text"
               name="name"
@@ -60,6 +61,7 @@ const RegisterUser = () => {
               onChange={handleChange}
               placeholder="Name"
             />
+            <Typography>Email</Typography>
             <TextField
               type="email"
               name="email"
@@ -67,6 +69,7 @@ const RegisterUser = () => {
               onChange={handleChange}
               placeholder="Email"
             />
+            <Typography>Number</Typography>
             <TextField
               type="number"
               name="phone"
@@ -74,6 +77,7 @@ const RegisterUser = () => {
               onChange={handleChange}
               placeholder="Phone"
             />
+            <Typography>City</Typography>
             <TextField
               type="text"
               name="city"
